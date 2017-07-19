@@ -21,9 +21,6 @@ export default {
   components: {
     SalaryChart
   },
-  mounted () {
-
-  },
   computed: {
     labels () {
       const meses = Object.keys(this.entity.salaries)
@@ -35,7 +32,10 @@ export default {
       const data = []
 
       Object.keys(this.entity.salaries).forEach((key) => {
-        data.push(this.entity.salaries[key].gross)
+        let value = this.entity.salaries[key].gross
+        value.replace(',', '')
+
+        data.push(value)
       })
 
       return data
