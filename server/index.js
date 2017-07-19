@@ -30,7 +30,7 @@ app.get('/api/entities/:entityId', (req, res) => {
 })
 
 // Start
-const PORT = process.env.APP_PORT || 3000
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
   console.log('Server started at port:', PORT)
