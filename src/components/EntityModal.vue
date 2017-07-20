@@ -33,8 +33,7 @@ export default {
 
       Object.keys(this.entity.salaries).forEach((key) => {
         let value = this.entity.salaries[key].gross
-        value.replace(',', '')
-
+        value = value.replace(',', '')
         data.push(value)
       })
 

@@ -49,8 +49,8 @@ export default {
       this.loading = true
       this.loaded = false
 
-      const url = `/api/entities/${this.selectedEntity}/`
-      // const url = `/static/estagiarios.json`
+      // const url = `/api/entities/${this.selectedEntity}/`
+      const url = `/static/estagiarios.json`
 
       axios.get(url)
         .then((response) => {
